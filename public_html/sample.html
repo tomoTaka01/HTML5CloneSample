@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>clone sample</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="sample.css" />
+        <script src="js/libs/jquery/jquery.js"></script>
+        <script src="sample.js"></script>
+    </head>
+    <body>
+        <div><output id="clonetime"></output></div>
+        <div>
+            <label for="cloneCount">clone count:</label>
+            <select id="cloneCount">
+                <option value="1" selected>1</option>
+                <option value="100">100</option>
+                <option value="500">500</option>
+                <option value="1000">1000</option>
+            </select>
+            <input type="button" id="cloneJs" value="clone by js" />
+            <input type="button" id="cloneJq" value="clone by jQuery" />
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <td>No</td>
+                    <td>Name</td>
+                    <td>age</td>
+                    <td>gender</td>
+                    <td>language</td>
+                    <td>delete(js)</td>
+                    <td>delete(jQuery)</td>
+                </tr>
+            </thead>
+            <tbody id="clonebody">
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" name="name" maxlength="10" value="name1"></td>
+                    <td>
+                        <select name="age">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="radio" name="gender0" value="male" />male
+                        <input type="radio" name="gender0" value="female" />female
+                    </td>
+                    <td>
+                        <input type="checkbox" name="Java" value="Java" />Java
+                        <input type="checkbox" name="JavaScript" value="JavaScript" />JavaScript
+                    </td>
+                    <td><input type="button" value="delete(js)" name="delButtonJs" 
+                               onclick='deleteTr(this);' data-Ix="0"/>
+                    </td>
+                    <td><input type="button" value="delete(jQuery)" name="delButtonJq" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
